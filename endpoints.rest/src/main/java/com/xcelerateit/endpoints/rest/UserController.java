@@ -10,4 +10,9 @@ public class UserController {
     public String registerUser(@RequestBody User user) {
         return "User registered: " + user.getName() + " with email: " + user.getEmail();
     }
+
+    @GetMapping("/hi")
+    public String home() {
+        return "Hello,Job Board Application!";
+    }
 }

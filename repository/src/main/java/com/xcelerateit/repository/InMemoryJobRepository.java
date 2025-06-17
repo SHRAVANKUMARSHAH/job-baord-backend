@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 import java.util.*;
 
 @Repository
-public class InMemoryJobRepository implements JobRepository {
+public abstract class InMemoryJobRepository implements JobRepository {
     private final Map<Long, Job> store = new HashMap<>();
     private Long idCounter = 1L;
 

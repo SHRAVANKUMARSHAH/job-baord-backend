@@ -9,6 +9,12 @@
     </parent>
 
     <artifactId>domain</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
@@ -17,7 +23,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.13.0</version>
                 <configuration>
-                    <release>21</release> <!-- Use your actual JDK version -->
+                    <release>17</release> <!-- Use your actual JDK version -->
                 </configuration>
             </plugin>
         </plugins>
