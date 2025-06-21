@@ -14,7 +14,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
         "com.xcelerateit.repository",
         "com.xcelerateit.domain",
         "com.xcelerateit.service",
-        "com.xcelerateit.endpoints.rest"  // ✅ ensures Swagger sees your controllers
+        "com.xcelerateit.endpoints.rest",
+        "com.xcelerateit.common",
          })
 @EnableJpaRepositories(basePackages = "com.xcelerateit.repository")
 @EntityScan(basePackages = "com.xcelerateit.domain")

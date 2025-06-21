@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>common</module>
         <module>domain</module>
         <module>startup</module>
         <module>repository</module>
@@ -45,7 +46,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>3.5.0</version> <!-- Apne Spring Boot plugin version yahan daalo -->
                 <configuration>
-                    <mainClass>com.xcelerateit.JobBoardApplication</mainClass>
+                    <mainClass>com.xcelerateit.startup.JobBoardApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

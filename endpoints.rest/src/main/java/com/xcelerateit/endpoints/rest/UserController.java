@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
     @PostMapping("/register")
     public String registerUser(@RequestBody User user) {
-        return "User registered: " + user.getName() + " with email: " + user.getEmail();
+        return "User registered: ";
     }
 
     @GetMapping("/hi")

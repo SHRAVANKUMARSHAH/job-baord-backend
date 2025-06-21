@@ -27,6 +27,20 @@
             <version>42.7.2</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.xcelerateit</groupId>
+            <artifactId>service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.xcelerateit</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+
+
 
 
         <!-- Spring Data JPA -->
@@ -41,12 +55,6 @@
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
-        <dependency>
-            <groupId>com.xcelerateit</groupId>
-            <artifactId>service</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-
 
 
         <!-- SLF4J Logging -->

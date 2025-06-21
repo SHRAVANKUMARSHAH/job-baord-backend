@@ -2,6 +2,7 @@ package com.xcelerateit.repository;
 
 import com.xcelerateit.domain.Job;
 import org.springframework.stereotype.Repository;
+
 import java.util.*;
 
 @Repository
