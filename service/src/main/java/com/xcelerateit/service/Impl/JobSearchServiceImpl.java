@@ -4,10 +4,9 @@ import com.xcelerateit.domain.Job;
 import com.xcelerateit.domain.JobResponse;
 import com.xcelerateit.repository.JobRepository;
 import com.xcelerateit.service.api.JobSearchService;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class JobSearchServiceImpl implements JobSearchService {
@@ -19,9 +18,10 @@ public class JobSearchServiceImpl implements JobSearchService {
     }
 
     @Override
-    public List<JobResponse> search(String location, String skills, String keyword) {
-        List<Job> jobs = jobRepository.searchJobs(location, skills, keyword);
-        return jobs.stream().map(JobResponse::new).collect(Collectors.toList());
+    public Page<JobResponse> search(String location, String skills, String keyword, int page, int size) {
+        PageRequest pageRequest = PageRequest.of(page, size);
+        Page<Job> jobPage = jobRepository.searchJobs(location, skills, keyword, pageRequest);
+        return jobPage.map(JobResponse::new);
     }
 
     @Override

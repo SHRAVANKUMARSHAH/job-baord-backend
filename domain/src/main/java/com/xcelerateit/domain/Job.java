@@ -1,10 +1,11 @@
 package com.xcelerateit.domain;
 
+import com.xcelerateit.domain.model.BaseEntity;
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "jobs")
-public class Job {
+public class Job extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

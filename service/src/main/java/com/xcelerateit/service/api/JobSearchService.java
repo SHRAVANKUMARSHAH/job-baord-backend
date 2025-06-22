@@ -2,11 +2,10 @@ package com.xcelerateit.service.api;
 
 import com.xcelerateit.domain.Job;
 import com.xcelerateit.domain.JobResponse;
-
-import java.util.List;
+import org.springframework.data.domain.Page;
 
 public interface JobSearchService {
-    List<JobResponse> search(String location, String skills, String keyword);
+    public Page<JobResponse> search(String location, String skills, String keyword, int page, int size);
     JobResponse getById(Long id);
     Job addJob(Job job);
     Job updateJob(Long id, Job updatedJob);

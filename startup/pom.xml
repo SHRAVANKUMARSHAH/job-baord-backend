@@ -20,8 +20,15 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.1.0</version>
+        </dependency>
+
+
+        <dependency>
             <groupId>com.xcelerateit</groupId>
-            <artifactId>repository</artifactId> <!-- या जो भी module का नाम हो जिसमें JobRepository है -->
+            <artifactId>repository</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
@@ -35,6 +42,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>3.5.0</version>
         </dependency>
 
         <!-- SLF4J Logging -->
