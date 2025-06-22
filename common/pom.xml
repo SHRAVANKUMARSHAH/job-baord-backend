@@ -69,5 +69,14 @@
             <artifactId>spring-web</artifactId>
             <version>6.1.6</version>
         </dependency>
+
+
+
+       <!-- &lt;!&ndash; ✅ Spring Data JPA auditing support &ndash;&gt;
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>-->
+
     </dependencies>
 </project>
