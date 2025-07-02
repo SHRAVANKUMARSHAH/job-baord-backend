@@ -55,5 +55,7 @@ public class JobPublicController {
     public ResponseEntity<String> deleteJob(@PathVariable Long id) {
         jobSearchService.deleteJob(id);
         return ResponseEntity.ok("Job deleted successfully");
+
     }
+
 }
