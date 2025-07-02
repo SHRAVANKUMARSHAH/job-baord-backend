@@ -4,6 +4,7 @@ import com.xcelerateit.exception.CustomAccessDeniedHandler;
 import com.xcelerateit.security.JwtFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
@@ -39,7 +40,8 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/auth/**").permitAll()        // public: login, register
+                        .requestMatchers("/api/auth/**").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/resume/match/**").permitAll()// public: login, register
                         .requestMatchers("/api/jobs/**").hasRole("EMPLOYER") // only EMPLOYER role allowed
                         .anyRequest().authenticated()                        // everything else must be authenticated
                 )
